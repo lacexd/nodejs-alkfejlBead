@@ -87,7 +87,7 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(flash());
 app.use(validator());
 
-//app.use('public', express.static(__dirname + '/public'));
+app.use('public', express.static(__dirname + '/public'));
 
 
 var router = require("./router");
@@ -107,7 +107,7 @@ var ormConfig = {
         }
     },
     defaults: {
-        migrate: 'alter'
+        migrate: 'safe'
     }
 };
 
