@@ -1,0 +1,215 @@
+{
+  "data": {
+    "game": [
+      {
+        "redTeam": "fnatic",
+        "blueTeam": "uol",
+        "blue1": "vizi",
+        "blue2": "horo",
+        "blue3": "poe",
+        "blue4": "vardags",
+        "blue5": "hyli",
+        "red1": "asdf",
+        "red2": "reignover",
+        "red3": "febiven",
+        "red4": "rekkles",
+        "red5": "yello",
+        "rside": null,
+        "bside": null,
+        "pickPhase": 0,
+        "createdAt": "2015-11-23T19:57:54.876Z",
+        "updatedAt": "2015-11-23T19:58:48.152Z",
+        "id": 9,
+        "rsidewin": true
+      },
+      {
+        "redTeam": "",
+        "blueTeam": "asd",
+        "blue1": "",
+        "blue2": "",
+        "blue3": "",
+        "blue4": "",
+        "blue5": "",
+        "red1": "",
+        "red2": "",
+        "red3": "",
+        "red4": "",
+        "red5": "",
+        "rside": "Blue Side,Red Side",
+        "bside": null,
+        "pickPhase": 0,
+        "createdAt": "2015-11-23T20:03:41.293Z",
+        "updatedAt": "2015-11-23T20:03:45.967Z",
+        "id": 10,
+        "rsidewin": true
+      },
+      {
+        "redTeam": "",
+        "blueTeam": "lolololol",
+        "blue1": "",
+        "blue2": "",
+        "blue3": "",
+        "blue4": "",
+        "blue5": "",
+        "red1": "",
+        "red2": "",
+        "red3": "",
+        "red4": "",
+        "red5": "",
+        "rside": "Blue Side,Red Side",
+        "bside": null,
+        "pickPhase": 0,
+        "createdAt": "2015-11-23T20:03:52.993Z",
+        "updatedAt": "2015-11-25T00:59:53.454Z",
+        "id": 11,
+        "rsidewin": true
+      }
+    ],
+    "user": [
+      {
+        "username": "asd",
+        "forename": "asd",
+        "surname": "asd",
+        "password": "$2a$10$KZcPjTImMfLnQgVilB1UcuqrZGtOa/hnXPWsjSfX5tqk4n3OMz3YW",
+        "role": "operator",
+        "createdAt": "2015-11-23T00:32:13.288Z",
+        "updatedAt": "2015-11-23T00:32:13.288Z",
+        "id": 2
+      },
+      {
+        "username": "a",
+        "password": "$2a$10$HXpsQq5TcONJGosWohE4Du8XB.TACGnEMulCntBtg.LFiN3Z.GhAC",
+        "surname": "Gipsz",
+        "forename": "Jakab",
+        "role": "operator",
+        "createdAt": "2015-11-24T13:32:02.837Z",
+        "updatedAt": "2015-11-24T13:32:02.837Z",
+        "id": 7
+      },
+      {
+        "username": "abcdef",
+        "password": "$2a$10$EKvdZ0GDKvOMizIdGNU0EOVeGzTHxzH6jallm8ohrJKPl2NpfiLr6",
+        "surname": "Gipsz",
+        "forename": "Jakab",
+        "role": "operator",
+        "createdAt": "2015-11-24T13:34:38.590Z",
+        "updatedAt": "2015-11-24T13:34:38.590Z",
+        "id": 13
+      }
+    ]
+  },
+  "schema": {
+    "game": {
+      "date": {
+        "type": "date"
+      },
+      "rsidewin": {
+        "type": "boolean",
+        "defaultsTo": "true"
+      },
+      "redTeam": {
+        "type": "string"
+      },
+      "blueTeam": {
+        "type": "string"
+      },
+      "blue1": {
+        "type": "string"
+      },
+      "blue2": {
+        "type": "string"
+      },
+      "blue3": {
+        "type": "string"
+      },
+      "blue4": {
+        "type": "string"
+      },
+      "blue5": {
+        "type": "string"
+      },
+      "red1": {
+        "type": "string"
+      },
+      "red2": {
+        "type": "string"
+      },
+      "red3": {
+        "type": "string"
+      },
+      "red4": {
+        "type": "string"
+      },
+      "red5": {
+        "type": "string"
+      },
+      "rside": {
+        "type": "string"
+      },
+      "bside": {
+        "type": "string"
+      },
+      "user": {
+        "type": "integer",
+        "model": "user",
+        "foreignKey": true,
+        "alias": "user"
+      },
+      "id": {
+        "type": "integer",
+        "autoIncrement": true,
+        "primaryKey": true,
+        "unique": true
+      },
+      "createdAt": {
+        "type": "datetime"
+      },
+      "updatedAt": {
+        "type": "datetime"
+      }
+    },
+    "user": {
+      "username": {
+        "type": "string",
+        "unique": true
+      },
+      "password": {
+        "type": "string"
+      },
+      "surname": {
+        "type": "string"
+      },
+      "forename": {
+        "type": "string"
+      },
+      "role": {
+        "type": "string",
+        "enum": [
+          "riporter",
+          "operator"
+        ],
+        "defaultsTo": "operator"
+      },
+      "id": {
+        "type": "integer",
+        "autoIncrement": true,
+        "primaryKey": true,
+        "unique": true
+      },
+      "createdAt": {
+        "type": "datetime"
+      },
+      "updatedAt": {
+        "type": "datetime"
+      }
+    }
+  },
+  "counters": {
+    "game": {
+      "id": 11
+    },
+    "user": {
+      "id": 13
+    }
+  }
+}

@@ -1,0 +1,94 @@
+<form class="form-horizontal col-lg-8 col-lg-offset-2"
+      method="post" action="/edit/{{game.id}}">
+<h1>Details of the game</h1>
+<table class="table table-striped">
+    <tr>
+        <th>Game's date</th>
+        <td contenteditable='true'>{{game.date}}</td>
+    </tr>
+    <tr>
+        <th>Red side team</th>
+        <td><input class="form-control" value="{{game.redTeam}}" id="rteamname" name="rteamname"></td>
+    </tr>   
+    
+    
+    <tr>
+        <th>Champion 1</th>
+        <td><input class="form-control" value="{{game.red1}}" id="rchamp1" name="rchamp1"></td>
+    </tr>
+    
+    <tr>
+        <th>Champion 2</th>
+        <td><input class="form-control" value="{{game.red2}}" id="rchamp2" name="rchamp2"></td>
+    </tr>
+    
+    <tr>
+        <th>Champion 3</th>
+        <td><input class="form-control" value="{{game.red3}}" id="rchamp3" name="rchamp3"></td>
+    </tr>
+    
+    <tr>
+        <th>Champion 4</th>
+        <td><input class="form-control" value="{{game.red4}}" id="rchamp4" name="rchamp4"></td>
+    </tr>
+    
+    <tr>
+        <th>Champion 5</th>
+        <td><input class="form-control" value="{{game.red5}}" id="rchamp5" name="rchamp5"></td>
+    </tr>
+    
+    <tr>
+        <th> </th>
+        <td></td>
+    </tr>
+
+    <tr>
+        <th>Blue side team</th>
+        <td><input class="form-control" value="{{game.blueTeam}}" id="bteamname" name="bteamname"></td>
+    </tr>   
+
+    
+    <tr>
+        <th>Champion 1</th>
+        <td><input class="form-control" value="{{game.blue1}}" id="bchamp1" name="bchamp1"></td>
+    </tr>
+    
+    <tr>
+        <th>Champion 2</th>
+        <td><input class="form-control" value="{{game.blue2}}" id="bchamp2" name="bchamp2"></td>
+    </tr>
+    
+    <tr>
+        <th>Champion 3</th>
+        <td><input class="form-control" value="{{game.blue3}}" id="bchamp3" name="bchamp3"></td>
+    </tr>
+    
+    <tr>
+        <th>Champion 4</th>
+        <td><input class="form-control" value="{{game.blue4}}" id="bchamp4" name="bchamp4"></td>
+    </tr>
+    
+    <tr>
+        <th>Champion 5</th>
+        <td><input class="form-control" value="{{game.blue5}}" id="bchamp5" name="bchamp5"></td>
+    </tr>
+    
+    <tr>
+        <th>Winner</th>
+        <td contenteditable='true'>
+            {{#if game.rsidewin}}
+            <span class="text-success">Blue Side</span>
+            {{else}}
+            <span class="text-warning">Red Side</span>
+            {{/if}}
+        </td>
+    </tr>
+</table>
+<div class="form-group">
+  <div class="col-lg-12">
+    <a href="/list" class="btn btn-default pull-left">Back</a>
+    <a href="/delete/{{game.id}}" class="btn btn-danger pull-right">Delete</a>
+    <button type="submit" class="btn btn-success pull-right">Save</button>
+  </div>
+</div>
+</form>

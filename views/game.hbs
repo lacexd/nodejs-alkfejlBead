@@ -1,0 +1,89 @@
+<h1>Details of the game</h1>
+<table class="table table-striped">
+    <tr>
+        <th>Game's date</th>
+        <td>{{game.date}}</td>
+    </tr>
+    <tr>
+        <th>Red side team</th>
+        <td>{{game.redTeam}}</td>
+    </tr>   
+    
+    
+    <tr>
+        <th>Champion 1</th>
+        <td>{{game.red1}}</td>
+    </tr>
+    
+    <tr>
+        <th>Champion 2</th>
+        <td>{{game.red2}}</td>
+    </tr>
+    
+    <tr>
+        <th>Champion 3</th>
+        <td>{{game.red3}}</td>
+    </tr>
+    
+    <tr>
+        <th>Champion 4</th>
+        <td>{{game.red4}}</td>
+    </tr>
+    
+    <tr>
+        <th>Champion 5</th>
+        <td>{{game.red5}}</td>
+    </tr>
+    
+    <tr>
+        <th> </th>
+        <td></td>
+    </tr>
+    
+    <tr>
+        <th>Blue side team</th>
+        <td>{{game.blueTeam}}</td>
+    </tr>
+    
+        <tr>
+        <th>Champion 1</th>
+        <td>{{game.blue1}}</td>
+    </tr>
+    
+    <tr>
+        <th>Champion 2</th>
+        <td>{{game.blue2}}</td>
+    </tr>
+    
+    <tr>
+        <th>Champion 3</th>
+        <td>{{game.blue3}}</td>
+    </tr>
+    
+    <tr>
+        <th>Champion 4</th>
+        <td>{{game.blue4}}</td>
+    </tr>
+    
+    <tr>
+        <th>Champion 5</th>
+        <td>{{game.blue5}}</td>
+    </tr>
+    
+    <tr>
+        <th>Winner</th>
+        <td>
+            {{#if game.rsidewin}}
+            <span class="text-success">Blue Side</span>
+            {{else}}
+            <span class="text-warning">Red Side</span>
+            {{/if}}
+        </td>
+    </tr>
+</table>
+<div class="form-group">
+  <div class="col-lg-12">
+    <a href="/list" class="btn btn-default pull-left">Back</a>
+    <a href="/delete/{{game.id}}" class="btn btn-danger pull-right">Delete</a>
+  </div>
+</div>

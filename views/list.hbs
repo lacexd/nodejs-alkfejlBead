@@ -1,0 +1,47 @@
+<h1>List of games</h1>
+<form class="form-horizontal col-lg-8 col-lg-offset-2"
+      method="get" action="/list">
+    <div class="form-group">
+      <div class="col-lg-10">
+        <input type="search" class="form-control" 
+               name="search" id="search" value="{{search}}"
+               placeholder="Search Teams..."></textarea>
+      </div>
+      <div class="col-lg-2">
+            <button type="submit" class="btn btn-info pull-left">
+                <span class="glyphicon glyphicon-search"></span>
+            </button>
+      </div>
+    </div>
+</form>
+<table class="table table-striped">
+    <tr>
+        <th>Game's date</th>
+        <th>Blue Side Team</th>
+        <th>Red Side Team</th>
+        <th class="text-right ">Actions</th>
+    </tr>
+    {{#each games as |game|}}
+    <tr class="text-{{#if game.rsidewin}}success{{else}}warning{{/if}}">
+        <td>{{game.date}}</td>
+        <td>{{game.blueTeam}}</td>
+        <td>{{game.redTeam}}</td>
+        <td class="text-right">
+        {{#unless game.rsidewin}}
+        <a class="btn btn-sm btn-success" href="/win/{{game.id}}">
+            <span class="glyphicon glyphicon-ok"></span>
+        </a>
+        {{/unless}}
+            <a class="btn btn-sm btn-info details" href="/game/{{game.id}}">
+                <span class="glyphicon glyphicon-eye-open"></span>
+            </a>
+            <a class="btn btn-sm btn-danger" href="/delete/{{game.id}}">
+                <span class="glyphicon glyphicon-remove"></span>
+            </a>
+            <a class="btn btn-sm btn-info" href="/edit/{{game.id}}">
+                <span class="glyphicon glyphicon-edit"></span>
+            </a>
+        </td>
+    </tr>
+    {{/each}}
+</table> 
